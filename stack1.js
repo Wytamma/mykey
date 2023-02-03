@@ -14,7 +14,7 @@ function draw() {
       ctx.drawImage(img,0,0);
       
       ctx.fillStyle = "#78abf8";
-      ctx.filter = "blur(1.2px)"
+      ctx.filter = "blur(2px)"
       ctx.font = 'lighter 36px Arial';
       ctx.textAlign = "right"
       ctx.fillText(mergeTime, 905, 1045);
