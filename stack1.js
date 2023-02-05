@@ -1,14 +1,14 @@
 function draw() {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
-    let date = new Date(Date.now() - 1000 * 60 * 10)
+    let date = new Date(Date.now() - 1000 * 60 * 20)
     let hours = date.getHours();
     let minutes = date.getMinutes();
     let ap = hours >= 12 ? 'pm' : 'am';
     hours = hours % 12;
     hours = hours ? hours : 12;
     minutes = minutes.toString().padStart(2, '0');
-    let mergeTime = `${hours} ${minutes} pm`
+    let mergeTime = `${hours} ${minutes} ${ap}`
     let img = new Image();
     img.addEventListener("load", ()=>{
       ctx.drawImage(img,0,0);
